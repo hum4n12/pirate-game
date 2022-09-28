@@ -19,7 +19,10 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
+            player.input_handler(event)
 
+        screen.fill((0, 0, 0))
+        player.update()
         player.draw(screen)
         pygame.display.flip()
         clock.tick(60)
